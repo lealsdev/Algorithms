@@ -87,7 +87,9 @@ void test_stack() {
     node<int>* popped = stk->pop();
     cout << "pop: " << popped->getValue() << endl;
     delete(popped);
-  }  
+  }
+
+  delete(stk);
 
   cout << "****************************************" << endl;
   cout << "END STACK" << endl;
