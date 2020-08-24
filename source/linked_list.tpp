@@ -7,7 +7,6 @@ namespace collections {
 
   template <typename T>
   linked_list<T>::~linked_list() {
-    std::cout << "cleaning" << std::endl;
     this->clean();
   }
 
@@ -45,9 +44,9 @@ namespace collections {
         node<T>* newHead = new node(value);
         this->_head = newHead;
         this->_head->setNext(oldHead);
+        this->_length++;
       }
 
-      this->_length++;
       return;
     }
 
@@ -57,8 +56,8 @@ namespace collections {
 
       oldTail->setNext(newNode);
       this->_tail = newNode;
-
       this->_length++;
+
       return;
     }
 
@@ -68,46 +67,53 @@ namespace collections {
 
     prevNode->setNext(newNode);
     newNode->setNext(nextNode);
+    
     this->_length++;
     
     return;
   }
 
   template <typename T>
-  node<T>* linked_list<T>::remove(int index) {
+  void linked_list<T>::remove(int index) {
     
     if(index < 0 || index > this->_length-1) {
-      return nullptr;
+      return;
     }
 
     if(index == 0) {
-      node<T>* retData = this->_head;
+      node<T>* dataToRemove = this->_head;
 
       this->_head = this->_head->getNext();
+
+      delete(dataToRemove);
       
       this->_length--;
 
-      return retData;
+      return;
     }
 
     node<T>* prevNode = this->getBy(index-1);
 
     if(index == this->_length-1) {
-      node<T>* retData = this->_tail;
+      node<T>* dataToRemove = this->_tail;
 
       this->_tail = prevNode;
 
+      delete(dataToRemove);
+
       this->_length--;
 
-      return retData;
+      return;
     }
 
-    node<T>* retData = prevNode->getNext();
+    node<T>* dataToRemove = prevNode->getNext();
     prevNode->setNext(prevNode->getNext()->getNext());
+
+    delete(dataToRemove);
 
     this->_length--;
 
-    return retData;
+    return;
   }
 
   template <typename T>
@@ -199,11 +205,11 @@ namespace collections {
     node<T>* current = this->_head;
     node<T>* nextCurrent;
 
-    while(current != nullptr) {
+    while(this->_length != 0) {
 
       nextCurrent = current->getNext();
-
       delete(current);
+
       this->_length--;
 
       current = nextCurrent;

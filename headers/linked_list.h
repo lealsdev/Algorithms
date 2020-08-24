@@ -17,7 +17,7 @@ namespace collections {
       ~linked_list();
       void add(T value);
       void insert(T value, int index);
-      node<T>* remove(int index);
+      void remove(int index);
       void reverse();
       T* traverse();
       node<T>* getBy(int index);      
@@ -29,6 +29,6 @@ namespace collections {
 
 }
 
-#include "linked_list.tpp"
+#include "../source/linked_list.tpp"
 
 #endif

@@ -8,7 +8,7 @@ namespace collections {
 
   template <typename T>
   node<T>::~node() {
-    std::cout << "cleaning node" << std::endl;
+    
   }
 
   template <typename T>
