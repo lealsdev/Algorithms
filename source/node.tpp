@@ -26,4 +26,9 @@ namespace collections {
     return this->_value;
   }
 
+  template <typename T>
+  node<T>* node<T>::clone() {
+    return new node(this->_value);
+  }  
+
 }

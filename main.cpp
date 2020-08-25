@@ -80,7 +80,11 @@ void test_stack() {
     cout << "push: " << i << endl;
   }
 
-  cout << endl;
+  cout << endl << endl;
+
+  cout << "CHECK TOP: " << stk->checkTop()->getValue() << endl;
+
+  cout << endl << endl;
 
   cout << "POP DATA" << endl;
   while(!stk->is_empty()) {

@@ -10,7 +10,6 @@ namespace collections {
   class queue {
     private:
       linked_list<T>* _data;
-      int _length;
 
     public:
       queue();
@@ -20,6 +19,9 @@ namespace collections {
       Node<T>* checkNext();
       bool isEmpty();
   }
+
 }
+
+#include "../source/queue.tpp"
 
 #endif

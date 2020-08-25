@@ -15,6 +15,7 @@ namespace collections {
       node<T>* getNext();    
       void setNext(node<T>*);
       T getValue();
+      node<T>* clone();
   };
   
 }

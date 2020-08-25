@@ -17,18 +17,24 @@ namespace collections {
 
   template <typename T>
   node<T>* stack<T>::pop() {
-    node<T>* newTop = this->get_cloned_top();
+    node<T>* top = this->_data->getBy(0);
+
+    if(top == nullptr) {
+      return nullptr;
+    }
+
+    node<T>* clonedTop = top->clone();
 
     this->_data->remove(0);
 
-    return newTop;
+    return clonedTop;
   }
 
   template <typename T>
   node<T>* stack<T>::checkTop() {
-    node<T>* newTop = this->get_cloned_top();
+    node<T>* top = this->_data->getBy(0);
 
-    return newTop;
+    return top;
   }
 
   template <typename T>
