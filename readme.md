@@ -14,3 +14,10 @@ In computer science, a stack is an abstract data type that serves as a collectio
 * pop, which removes the most recently added element that was not yet removed.
 
 [:globe_with_meridians: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
+
+---
+
+### [Queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))
+In computer science, a queue is a collection of entities that are maintained in a sequence and can be modified by the addition of entities at one end of the sequence and the removal of entities from the other end of the sequence.
+
+[:globe_with_meridians: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))
