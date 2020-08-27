@@ -10,16 +10,16 @@ namespace collections {
   class queue {
     private:
       linked_list<T>* _data;
+      int _length;
 
     public:
       queue();
       ~queue();
       void enqueue(T value);
-      Node<T>* dequeue();
-      Node<T>* checkNext();
-      bool isEmpty();
-  }
-
+      node<T>* dequeue();
+      node<T>* checkNext();
+      bool is_empty();
+  };
 }
 
 #include "../source/queue.tpp"

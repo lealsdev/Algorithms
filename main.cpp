@@ -2,6 +2,7 @@
 #include <iostream>
 #include "headers/linked_list.h"
 #include "headers/stack.h"
+#include "headers/queue.h"
 
 using namespace std;
 using namespace collections;
@@ -104,9 +105,48 @@ void test_stack() {
 
 }
 
+void test_queue() {
+
+  queue<int>* que = new queue<int>();
+
+  cout << "****************************************" << endl;
+  cout << "QUEUE" << endl;
+  cout << "****************************************" << endl;
+
+  cout << "ENQUEUE DATA" << endl;
+  for(int i = 1; i <= 5; ++i) {
+    que->enqueue(i);
+    cout << "push: " << i << endl;
+  }
+
+  cout << endl << endl;
+
+  cout << "CHECK NEXT: " << que->checkNext()->getValue() << endl;
+
+  cout << endl << endl;
+
+  cout << "DEQUEUE DATA" << endl;
+  while(!que->is_empty()) {
+    node<int>* popped = que->dequeue();
+    cout << "pop: " << popped->getValue() << endl;
+    delete(popped);
+  }
+
+  delete(que);
+
+  cout << "****************************************" << endl;
+  cout << "END QUEUE" << endl;
+  cout << "****************************************" << endl;
+  cout << endl;
+
+  return;
+
+}
+
 int main() {
   test_linked_list();
   test_stack();
+  test_queue();
 
   return 0;
 }
