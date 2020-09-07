@@ -10,7 +10,7 @@ namespace collections {
   class Stack {
     private:
       LinkedList<T>* _data;
-      Node<T>* get_cloned_top() {
+      Node<T>* getClonedTop() {
         Node<T>* top = this->_data->getBy(0);
         Node<T>* newTop = new Node<T>(top->getValue());
         
@@ -23,7 +23,7 @@ namespace collections {
       void push(T value);
       Node<T>* pop();
       Node<T>* checkTop();
-      bool is_empty();
+      bool isEmpty();
   };
 
 }

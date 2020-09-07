@@ -38,7 +38,7 @@ namespace collections {
   }
 
   template <typename T>
-  bool Stack<T>::is_empty() {
+  bool Stack<T>::isEmpty() {
     //std::cout << "len: " << this->_data->getLength() << std::endl;
     return this->_data->getLength() == 0;
   }

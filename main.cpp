@@ -88,7 +88,7 @@ void test_stack() {
   cout << endl << endl;
 
   cout << "POP DATA" << endl;
-  while(!stk->is_empty()) {
+  while(!stk->isEmpty()) {
     Node<int>* popped = stk->pop();
     cout << "pop: " << popped->getValue() << endl;
     delete(popped);
