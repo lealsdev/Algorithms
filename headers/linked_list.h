@@ -6,23 +6,23 @@
 namespace collections {
 
   template <typename T>
-  class linked_list {
+  class LinkedList {
     private:
-      node<T> *_head;
-      node<T> *_tail;
+      Node<T> *_head;
+      Node<T> *_tail;
       int _length;
 
     public:
-      linked_list();
-      ~linked_list();
+      LinkedList();
+      ~LinkedList();
       void add(T value);
       void insert(T value, int index);
       void remove(int index);
       void reverse();
       T* traverse();
-      node<T>* getBy(int index);      
-      node<T>* getTail();
-      node<T>* getHead();
+      Node<T>* getBy(int index);      
+      Node<T>* getTail();
+      Node<T>* getHead();
       int getLength();
       void clean();
   };

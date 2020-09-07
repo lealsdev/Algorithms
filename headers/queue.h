@@ -9,15 +9,15 @@ namespace collections {
   template <typename T>
   class queue {
     private:
-      linked_list<T>* _data;
+      LinkedList<T>* _data;
       int _length;
 
     public:
       queue();
       ~queue();
       void enqueue(T value);
-      node<T>* dequeue();
-      node<T>* checkNext();
+      Node<T>* dequeue();
+      Node<T>* checkNext();
       bool is_empty();
   };
 }

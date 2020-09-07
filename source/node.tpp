@@ -2,33 +2,33 @@
 namespace collections {
 
   template <typename T>
-  node<T>::node(T value) {
+  Node<T>::Node(T value) {
     this->_value = value;
   }
 
   template <typename T>
-  node<T>::~node() {
+  Node<T>::~Node() {
     
   }
 
   template <typename T>
-  node<T>* node<T>::getNext() {
+  Node<T>* Node<T>::getNext() {
     return this->_next;
   }
 
   template <typename T>
-  void node<T>::setNext(node<T>* next) {
+  void Node<T>::setNext(Node<T>* next) {
     this->_next = next;
   }
 
   template <typename T>
-  T node<T>::getValue() {
+  T Node<T>::getValue() {
     return this->_value;
   }
 
   template <typename T>
-  node<T>* node<T>::clone() {
-    return new node(this->_value);
+  Node<T>* Node<T>::clone() {
+    return new Node(this->_value);
   }  
 
 }

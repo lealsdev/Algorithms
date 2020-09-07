@@ -2,7 +2,7 @@ namespace collections {
   
   template <typename T>
   stack<T>::stack() {
-    this->_data = new linked_list<T>();
+    this->_data = new LinkedList<T>();
   }
 
   template <typename T>
@@ -16,14 +16,14 @@ namespace collections {
   }
 
   template <typename T>
-  node<T>* stack<T>::pop() {
-    node<T>* top = this->_data->getBy(0);
+  Node<T>* stack<T>::pop() {
+    Node<T>* top = this->_data->getBy(0);
 
     if(top == nullptr) {
       return nullptr;
     }
 
-    node<T>* clonedTop = top->clone();
+    Node<T>* clonedTop = top->clone();
 
     this->_data->remove(0);
 
@@ -31,8 +31,8 @@ namespace collections {
   }
 
   template <typename T>
-  node<T>* stack<T>::checkTop() {
-    node<T>* top = this->_data->getBy(0);
+  Node<T>* stack<T>::checkTop() {
+    Node<T>* top = this->_data->getBy(0);
 
     return top;
   }

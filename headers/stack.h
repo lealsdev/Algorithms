@@ -9,10 +9,10 @@ namespace collections {
   template <typename T>
   class stack {
     private:
-      linked_list<T>* _data;
-      node<T>* get_cloned_top() {
-        node<T>* top = this->_data->getBy(0);
-        node<T>* newTop = new node<T>(top->getValue());
+      LinkedList<T>* _data;
+      Node<T>* get_cloned_top() {
+        Node<T>* top = this->_data->getBy(0);
+        Node<T>* newTop = new Node<T>(top->getValue());
         
         return newTop;
       }
@@ -21,8 +21,8 @@ namespace collections {
       stack();
       ~stack();
       void push(T value);
-      node<T>* pop();
-      node<T>* checkTop();
+      Node<T>* pop();
+      Node<T>* checkTop();
       bool is_empty();
   };
 

@@ -1,21 +1,21 @@
-#ifndef NODE_H
-#define NODE_H
+#ifndef Node_H
+#define Node_H
 
 namespace collections {
 
   template <typename T>
-  class node {
+  class Node {
     private:
       T _value;
-      node<T> *_next;
+      Node<T> *_next;
 
     public:
-      node(T value);
-      ~node();
-      node<T>* getNext();    
-      void setNext(node<T>*);
+      Node(T value);
+      ~Node();
+      Node<T>* getNext();    
+      void setNext(Node<T>*);
       T getValue();
-      node<T>* clone();
+      Node<T>* clone();
   };
   
 }

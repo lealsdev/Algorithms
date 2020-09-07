@@ -7,7 +7,7 @@
 using namespace std;
 using namespace collections;
 
-void traverse(linked_list<int>* list) {
+void traverse(LinkedList<int>* list) {
   cout << "TRAVERSE" << endl;
   int* data = list->traverse();
   
@@ -19,13 +19,13 @@ void traverse(linked_list<int>* list) {
   free(data);
 }
 
-void test_linked_list()
+void test_LinkedList()
 {
   cout << "****************************************" << endl;
   cout << "LINKED LIST" << endl;
   cout << "****************************************" << endl;
 
-  linked_list<int> *list = new linked_list<int>();
+  LinkedList<int> *list = new LinkedList<int>();
 
   cout << "ADDING ITEMS IN THE LINKED LIST" << endl;
   list->add(2);
@@ -89,7 +89,7 @@ void test_stack() {
 
   cout << "POP DATA" << endl;
   while(!stk->is_empty()) {
-    node<int>* popped = stk->pop();
+    Node<int>* popped = stk->pop();
     cout << "pop: " << popped->getValue() << endl;
     delete(popped);
   }
@@ -127,7 +127,7 @@ void test_queue() {
 
   cout << "DEQUEUE DATA" << endl;
   while(!que->is_empty()) {
-    node<int>* popped = que->dequeue();
+    Node<int>* popped = que->dequeue();
     cout << "pop: " << popped->getValue() << endl;
     delete(popped);
   }
@@ -144,7 +144,7 @@ void test_queue() {
 }
 
 int main() {
-  test_linked_list();
+  test_LinkedList();
   test_stack();
   test_queue();
 
