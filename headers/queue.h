@@ -7,14 +7,14 @@
 namespace collections {
 
   template <typename T>
-  class queue {
+  class Queue {
     private:
       LinkedList<T>* _data;
       int _length;
 
     public:
-      queue();
-      ~queue();
+      Queue();
+      ~Queue();
       void enqueue(T value);
       Node<T>* dequeue();
       Node<T>* checkNext();

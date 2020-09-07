@@ -7,7 +7,7 @@
 namespace collections {
 
   template <typename T>
-  class stack {
+  class Stack {
     private:
       LinkedList<T>* _data;
       Node<T>* get_cloned_top() {
@@ -18,8 +18,8 @@ namespace collections {
       }
 
     public:
-      stack();
-      ~stack();
+      Stack();
+      ~Stack();
       void push(T value);
       Node<T>* pop();
       Node<T>* checkTop();

@@ -69,10 +69,10 @@ void test_LinkedList()
 
 void test_stack() {
 
-  stack<int>* stk = new stack<int>();
+  Stack<int>* stk = new Stack<int>();
 
   cout << "****************************************" << endl;
-  cout << "STACK" << endl;
+  cout << "Stack" << endl;
   cout << "****************************************" << endl;
 
   cout << "PUSH DATA" << endl;
@@ -97,7 +97,7 @@ void test_stack() {
   delete(stk);
 
   cout << "****************************************" << endl;
-  cout << "END STACK" << endl;
+  cout << "END Stack" << endl;
   cout << "****************************************" << endl;
   cout << endl;
 
@@ -107,13 +107,13 @@ void test_stack() {
 
 void test_queue() {
 
-  queue<int>* que = new queue<int>();
+  Queue<int>* que = new Queue<int>();
 
   cout << "****************************************" << endl;
-  cout << "QUEUE" << endl;
+  cout << "Queue" << endl;
   cout << "****************************************" << endl;
 
-  cout << "ENQUEUE DATA" << endl;
+  cout << "ENQueue DATA" << endl;
   for(int i = 1; i <= 5; ++i) {
     que->enqueue(i);
     cout << "push: " << i << endl;
@@ -125,7 +125,7 @@ void test_queue() {
 
   cout << endl << endl;
 
-  cout << "DEQUEUE DATA" << endl;
+  cout << "DEQueue DATA" << endl;
   while(!que->is_empty()) {
     Node<int>* popped = que->dequeue();
     cout << "pop: " << popped->getValue() << endl;
@@ -135,7 +135,7 @@ void test_queue() {
   delete(que);
 
   cout << "****************************************" << endl;
-  cout << "END QUEUE" << endl;
+  cout << "END Queue" << endl;
   cout << "****************************************" << endl;
   cout << endl;
 

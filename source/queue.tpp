@@ -1,25 +1,25 @@
 namespace collections {
 
   template <typename T>
-  queue<T>::queue() {
+  Queue<T>::Queue() {
     this->_data = new LinkedList<T>();
     this->_length = 0;
   }
 
   template <typename T>
-  queue<T>::~queue() {
+  Queue<T>::~Queue() {
     delete(this->_data);
   }
 
   template <typename T>
-  void queue<T>::enqueue(T value) {
+  void Queue<T>::enqueue(T value) {
     this->_data->add(value);
 
     return;
   }
 
   template <typename T>
-  Node<T>* queue<T>::dequeue() {
+  Node<T>* Queue<T>::dequeue() {
     Node<T>* next = this->_data->getBy(0);
     Node<T>* nextInLine = new Node(next->getValue());
 
@@ -33,14 +33,14 @@ namespace collections {
   }
 
   template <typename T>
-  Node<T>* queue<T>::checkNext() {
+  Node<T>* Queue<T>::checkNext() {
     Node<T>* next = this->_data->getBy(0);
 
     return next;
   }
 
   template <typename T>
-  bool queue<T>::is_empty() {
+  bool Queue<T>::is_empty() {
     return this->_data->getLength() == 0;
   }
 }
